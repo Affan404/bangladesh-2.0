@@ -12,24 +12,15 @@
     --black: #0E0E0E;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
+h1, h2, h3, h4, h5, h6, p, span {
     color: var(--black);
 }
-
-p,
-span {
-    line-height: 22px;
+p, span {
+    line-height: 23px;
 }
 
 body {
-    font-family: "Fira Sans", serif;
+    font-family: "Fira Sans", serif; 
     background: var(--primary-bg);
 }
 
@@ -40,13 +31,19 @@ body {
 
 .common_btn {
     padding: 9px 17px;
-    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
+    font-size: 16px;
     font-weight: 600;
     background: var(--theme-bg);
-    border: none;
+    border: 1px solid transparent;
     color: #fff;
+    transition: .3s all ease-in-out;
+}
+.common_btn:hover{
+    background: transparent;
+    border: 1px solid var(--theme-bg);
+    color: var(--theme-bg);
 }
 
 section {
@@ -75,7 +72,6 @@ nav {
 nav h4 {
     font-size: 32px;
 }
-
 nav button {
     color: var(--theme-bg);
     padding: 15px 35px;
@@ -85,6 +81,12 @@ nav button {
     cursor: pointer;
     background: transparent;
     font-weight: 600;
+    transition: .3s all ease-in-out;
+}
+nav button:hover{
+    background: var(--theme-bg);
+    color: #fff;
+
 }
 
 /* header syle ends */
@@ -112,11 +114,9 @@ nav button {
     font-weight: 700;
     margin: 13px 0 20px 0;
 }
-
 .hero_content_photo img {
     width: 400px;
 }
-
 .hero_content button {
     padding: 15px 35px;
     font-size: 16px;
@@ -126,53 +126,79 @@ nav button {
     background: var(--theme-bg);
     border: none;
     color: #fff;
+    border: 1px solid transparent;
+    transition: .3s all ease-in-out;
+}
+.hero_content button:hover{
+    background: transparent;
+    border-color: var(--theme-bg);
+    color: var(--theme-bg);
+
 }
 
 /* hero section ends here */
 
 /* vision section starts from here */
-.vision_section {}
-
 .vision_item_container {
     display: flex;
     gap: 20px;
 }
-
 .vision_item {
     padding: 28px;
     border-radius: 16px;
+    width: 390px;
 }
-
 #vision_item1 {
     background: rgba(213, 225, 245, 1);
 }
-
+#vision_btn1{
+    background: #5490F5;
+    transition: .3s all ease-in-out;
+}
+#vision_btn1:hover{
+    background:#FFC239 ;
+    border-color: #FFC239;
+    color: #fff;
+}
 #vision_item2 {
     background: rgba(198, 228, 214, 1);
 }
-
+#vision_btn2{
+    background: #09A15C;
+    transition: .3s all ease-in-out;
+}
+#vision_btn2:hover{
+    background: #5490F5;
+    border-color: #5490F5;
+    color: #fff; 
+}
 #vision_item3 {
     background: rgba(247, 235, 207, 1);
 }
-
+#vision_btn3{
+    background: #FFC239;
+    transition: .3s all ease-in-out;
+}
+#vision_btn3:hover{
+    background: #09A15C;
+    border-color: #09A15C;
+    color: #fff;
+}
 .vision_item h3 {
     font-size: 18px;
     opacity: .8;
     margin-top: 20px;
 }
-
 .vision_item p {
     margin: 10px 0 20px 0;
     opacity: .7;
 }
-
 /* vision section ends here */
 
 /* qoute section starts */
 .quote_section {
     position: relative;
 }
-
 .quote_section::after {
     position: absolute;
     content: '';
@@ -183,7 +209,6 @@ nav button {
     border: 1px solid var(--black);
     z-index: -1;
 }
-
 .qoute_container {
     background: url(../images/quote-bg.png), #fff;
     background-repeat: no-repeat;
@@ -194,20 +219,15 @@ nav button {
     border: 1px solid rgba(14, 14, 14, 0.15);
 
 }
-
-.quote_section p {}
-
+.quote_section p {
+    opacity: .8;
+}
 .quote_section h3 {
     margin-top: 10px;
 }
-
-.quote_section span {}
-
 /* qoute section ends */
 
 /* news section starts from here */
-.news_section {}
-
 .news_container {
     display: flex;
     background: #fff;
@@ -216,49 +236,32 @@ nav button {
     border-radius: 20px;
     margin-bottom: 20px;
 }
-
-.news_photo {}
-
 .news_photo img {
     border-radius: 20px;
     width: 370px;
 }
-
-.news_content {}
-
 .news_content h3 {
     font-size: 28px;
     opacity: .8;
 }
-
 .news_content img {
     margin: 10px 0;
     width: 115px;
 }
-
 .news_content span {
     margin-right: 10px;
     opacity: .7;
 }
-
 .news_content p {
     opacity: .7;
 }
-
 .news_info {
     opacity: .7;
     margin: 10px 0 28px 0;
 }
-
 /* news section ends */
 
 /* donate section starts from here */
-.donate_section {}
-
-.donate_container {}
-
-.donate_taka {}
-
 .donate_taka ul {
     display: flex;
     align-items: center;
@@ -274,8 +277,12 @@ nav button {
     padding: 36px;
     border-radius: 17px;
     cursor: pointer;
+    transition: .2s all ease-in-out;
+    border: 1px solid rgba(14, 14, 14, 0.15) ;
 }
-
+.donate_taka ul li:hover{
+    background: var(--secondary-bg);
+}
 .donate_container input {
     display: block;
     width: 80%;
@@ -287,16 +294,13 @@ nav button {
     border: none;
     border-bottom: 1px solid rgba(14, 14, 14, 0.15);
 }
-
 .donate_container input::placeholder {
     opacity: .3;
     font-size: 18px;
 }
-
 .donate_container .common_btn {
     display: inline-block;
 }
-
 /* donate section ends here */
 
 /* newsletter section starts from here */
@@ -305,13 +309,39 @@ nav button {
     padding: 80px 0;
     border-radius: 20px;
 }
-
-.subscribe_container {}
-
-.subscribe_container input {}
-
-.subscribe_container .common_btn {}
-
-.subscribe_container p {}
-
+.newsletter_section p{
+    opacity: .7;
+}
+.subscribe_container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe_container input{
+    padding: 10px 36px;
+    width: 540px;
+    border: transparent;
+    border-radius: 8px 0 0 8px;
+    color: var(--theme-bg);
+}
+.subscribe_container input::placeholder{
+    font-size: 15px;
+    opacity: .3;
+}
+.subscribe_container button{
+    padding: 8px 17px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    background: var(--theme-bg);
+    border: 1px solid transparent;
+    color: #fff;
+    transition: .3s all ease-in-out;
+    border-radius: 0px 8px 8px 0px;
+}
+.subscribe_container button:hover{
+    background: red;
+}
 /* newsletter section ends here */

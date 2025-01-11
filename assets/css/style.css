@@ -12,14 +12,31 @@
     --black: #0E0E0E;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+    color: var(--black);
+}
+
+p,
+span {
+    line-height: 22px;
+}
+
 body {
     font-family: "Fira Sans", serif;
+    background: var(--primary-bg);
 }
 
 /* SHARED STYLE */
 .common_btn {
-    padding: 15px 35px;
-    font-size: 18px;
+    padding: 9px 17px;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
@@ -29,13 +46,23 @@ body {
 }
 
 section {
-    margin: 0 170px 80px 170px;
+    margin: 0 136px 80px 136px;
+}
+
+.section_title h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.section_title p {
+    margin-bottom: 28px;
+    opacity: .7;
 }
 
 /* SHARED STYLE */
 /* header syle starts */
 nav {
-    margin: 24px 170px;
+    margin: 24px 136px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -49,7 +76,7 @@ nav button {
     color: var(--theme-bg);
     padding: 15px 35px;
     border: 1px solid var(--theme-bg);
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 8px;
     cursor: pointer;
     background: transparent;
@@ -63,6 +90,7 @@ nav button {
     background: var(--secondary-bg);
     display: flex;
     align-items: center;
+    justify-content: space-between;
     border-radius: 24px;
     height: 476px;
     padding: 0 52px;
@@ -76,9 +104,78 @@ nav button {
 }
 
 .hero_content h2 {
-    font-size: 39px;
+    font-size: 43px;
     font-weight: 700;
     margin: 13px 0 20px 0;
 }
 
+.hero_content_photo img {
+    width: 400px;
+}
+
+.hero_content button {
+    padding: 15px 35px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    background: var(--theme-bg);
+    border: none;
+    color: #fff;
+}
+
 /* hero section ends here */
+
+/* vision section starts from here */
+.vision_section {}
+.vision_item_container {
+    display: flex;
+    gap: 20px;
+}
+.vision_item {
+    padding: 28px;
+    border-radius: 16px;
+}
+#vision_item1 {
+    background: rgba(213, 225, 245, 1);
+}
+#vision_item2 {
+    background: rgba(198, 228, 214, 1);
+}
+#vision_item3 {
+    background: rgba(247, 235, 207, 1);
+}
+.vision_item h3 {
+    font-size: 18px;
+    opacity: .8;
+    margin-top: 20px;
+}
+.vision_item p {
+    margin: 10px 0 20px 0;
+    opacity: .7;
+}
+
+/* vision section ends here */
+
+/* qoute section starts */
+.quote_section {
+   
+}
+.qoute_container{
+    background: url(../images/quote-bg.png),#fff;
+    background-repeat: no-repeat;
+    background-size: 64px;
+    background-position: 22px 22px;
+    border-radius: 16px;
+    padding: 44px 22px;
+    border: 1px solid rgba(14, 14, 14, 0.15);
+
+}
+.quote_section p {}
+.quote_section h3 {
+margin-top: 10px;
+}
+
+.quote_section span {}
+
+/* qoute section ends */
